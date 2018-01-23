@@ -1,7 +1,7 @@
 # Emotion-Detection
 Detect emotions on human faces
 
-This code uses an available functionality in OpenCV called Fisher Face Recognizer. HAAR Cascade Classifiers in OpenCV are used to detect a face in the frame and the trained model on different facial emotions is used to predict the emotion on the detected face in real-time. This code was used to detect and record emotions of fear when a drone is being flown around a human being to determine the areas where the drone inflicts fear. The code was around 70% accurate and it is designed to train everytime the code is being run. The next step would be to save the model so that it need not be trained everytime.
+This code uses an available functionality in OpenCV called Fisher Face Recognizer. HAAR Cascade Classifiers in OpenCV are used to detect a face in the frame. A model is trained on different facial emotions and is used to predict the emotion on the detected face in real-time. This code was used to detect and record emotions of fear when a drone is being flown around a human being to determine the areas where the drone inflicts fear. The code was around 70%-80% accurate and it is designed to train everytime the code is run. The next step would be to save the model so that it need not be trained everytime.
 
 The dataset for training can be downloaded from here after your request has been approved: http://www.consortium.ri.cmu.edu/ckagree/
 or you can create your own dataset of different people with different emotions in grayscale.
