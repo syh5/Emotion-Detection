@@ -93,7 +93,7 @@ def run_recognizer():
     correct = 0
     incorrect = 0
     
-    cap = cv2.VideoCapture("6.avi")
+    cap = cv2.VideoCapture(0)
     fourcc = cv2.VideoWriter_fourcc(*'XVID')
     out = cv2.VideoWriter('output1.avi',fourcc, 20.0, (640,480))
 
@@ -109,8 +109,7 @@ def run_recognizer():
     	ret, frame = cap.read()
 	
     	image = detect_faces(frame)
-    	#image = cv2.imread("sachin.jpg",cv2.IMREAD_GRAYSCALE)
-	if image is None:
+    	if image is None:
   		pass
 	else:
 		pred, conf = face.predict(image)
