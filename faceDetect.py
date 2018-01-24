@@ -42,12 +42,11 @@ def make_sets():
 
 def detect_faces(frame):
 
-	faceDet = cv2.CascadeClassifier("/home/realsys2/opencv/data/haarcascades/haarcascade_frontalface_default.xml")
-	faceDet2 = cv2.CascadeClassifier("/home/realsys2/opencv/data/haarcascades/haarcascade_frontalface_alt2.xml")
-	faceDet3 = cv2.CascadeClassifier("/home/realsys2/opencv/data/haarcascades/haarcascade_frontalface_alt.xml")
-	faceDet4 = cv2.CascadeClassifier("/home/realsys2/opencv/data/haarcascades/haarcascade_frontalface_alt_tree.xml")
+	faceDet = cv2.CascadeClassifier("/home/opencv/data/haarcascades/haarcascade_frontalface_default.xml") # Path to haarcascade classifiers
+	faceDet2 = cv2.CascadeClassifier("/home/opencv/data/haarcascades/haarcascade_frontalface_alt2.xml")
+	faceDet3 = cv2.CascadeClassifier("/home/opencv/data/haarcascades/haarcascade_frontalface_alt.xml")
+	faceDet4 = cv2.CascadeClassifier("/home/opencv/data/haarcascades/haarcascade_frontalface_alt_tree.xml")
 
-	#frame = cv2.imread("sachin.jpg") #Open image
 	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) #Convert image to grayscale
 	#print("detect_faces")
 	#Detect face using 4 different classifiers
@@ -76,8 +75,6 @@ def detect_faces(frame):
 	    try:
 		out = cv2.resize(gray, (350, 350)) #Resize face so all images have same size
 		return out
-		#cv2.imwrite("/home/realsys2/opencv/Workspace/EmotionDetect/gray.jpg", out) #Write image
-		#print("writing file")
 	    except:
 	       pass 
 
